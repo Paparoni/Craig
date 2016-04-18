@@ -1,4 +1,7 @@
 /* RiveScript.com "Try Online" Script */
+var CRAIG = jQuery.get('craig.rive', function(data) {
+    return data;
+});
 window.bot = null;
 
 function loadTemplate(template) {
