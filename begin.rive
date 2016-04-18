@@ -1,6 +1,5 @@
 // Bot variables
-! var name = Tutorial
-! var age  = 5
+! var name = Craig
 
 // Substitutions
 ! sub i'm     = i am
