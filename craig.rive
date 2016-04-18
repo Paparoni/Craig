@@ -34,4 +34,16 @@
 	var query = escape(args.join(" "));
 	return "<a href=\"http://www.google.com/search?q=" + query + "\">Click Here!</a>";
 < object
+/*
+> object define javascript
+	var query = escape(args.join(" "));
+	
+
+}
+
+ $.getJSON( "http://dictionaryapi.net/api/definition/"+query, function( json ) {
+  console.log( "JSON Data: " + json.defintion[ 3 ].name );
+  
+ });
+ */
 
