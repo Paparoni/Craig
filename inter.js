@@ -1,18 +1,11 @@
-var bot = new RiveScript();
-
-// Load a directory full of RiveScript documents (.rive files). This is for
-// Node.JS only: it doesn't work on the web!
-bot.loadDirectory("brain", loading_done, loading_error);
-
-// Load an individual file.
-bot.loadFile("brain/testsuite.rive", loading_done, loading_error);
+var Craig = new RiveScript();
 
 // Load a list of files all at once (the best alternative to loadDirectory
 // for the web!)
-bot.loadFile([
-    "brain/begin.rive",
-    "brain/admin.rive",
-    "brain/clients.rive"
+Craig.loadFile([
+    "begin.rive",
+    "admin.rive",
+    "clients.rive"
 ], loading_done, loading_error);
 
 // All file loading operations are asynchronous, so you need handlers
@@ -23,10 +16,10 @@ function loading_done (batch_num) {
     console.log("Batch #" + batch_num + " has finished loading!");
 
     // Now the replies must be sorted!
-    bot.sortReplies();
+    Craig.sortReplies();
 
     // And now we're free to get a reply from the brain!
-    var reply = bot.reply("local-user", "Hello, bot!");
+    var reply = Craig.reply("local-user", "Hello, bot!");
     console.log("The bot says: " + reply);
 }
 
