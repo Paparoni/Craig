@@ -1,17 +1,46 @@
 <html>
 <head>
-<script src="libs/jquery.js"></script>
+ <script src="libs/jquery.js"></script>
 <link rel="stylesheet" type="text/css" href="libs/bootstrap.css">
 <script src="libs/bootstrap.js"></script>
 <script src="libs/bootbox.js"></script>
 <script src="libs/rivescript.js"></script>
 <link rel="stylesheet" type="text/css" href="craig.css">
+<link rel="stylesheet" type="text/css" href="monokai.css">
+<link rel="stylesheet" type="text/css" href="ui.css">
 <script src="inter.js"></script>
 </head>
 <body>
+<!--
 <div class="boxed" id="outputCS">
   
 </div>
     <center><input id="userInput" name="textinput" type="text" placeholder="Hello Craig..." class="form-control input-md"></center>
+
+-->
+<div class="modal fade" id="chatModal" tabindex="-1" role="outputCS" aria-labelledby="chatModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="chatModalLabel">Dialogue</h4>
+			</div>
+			<div class="modal-body">
+				<div class="try-dialogue" id="outputCS"></div>
+
+				<fieldset>
+					<legend>Send a Message</legend>
+					<input type="text" class="form-control" id="userInput" placeholder="Press Enter to send">
+				</fieldset>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
 </body>
 </html>
