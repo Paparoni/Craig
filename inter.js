@@ -4,8 +4,7 @@ var Craig = new RiveScript();
 // for the web!)
 Craig.loadFile([
     "begin.rive",
-    "admin.rive",
-    "clients.rive"
+    "craig.rive"
 ], loading_done, loading_error);
 
 // All file loading operations are asynchronous, so you need handlers
