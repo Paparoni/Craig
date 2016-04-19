@@ -2,6 +2,7 @@ var Craig = new RiveScript();
 
 // Load a list of files all at once (the best alternative to loadDirectory
 // for the web!)
+var talkToBot = function(message){
 Craig.loadFile([
     "begin.rive",
     "craig.rive"
@@ -18,11 +19,13 @@ function loading_done (batch_num) {
     Craig.sortReplies();
 
     // And now we're free to get a reply from the brain!
-    var reply = Craig.reply("local-user", "Hello, bot!");
+    var reply = Craig.reply("local-user", message);
     console.log("The bot says: " + reply);
+
 }
 
 // It's good to catch errors too!
 function loading_error (batch_num, error) {
     console.log("Error when loading files: " + error);
+}
 }
