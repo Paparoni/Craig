@@ -1,4 +1,5 @@
 var Craig = new RiveScript();
+var oboe = require('oboe');
 
 $("#chatModal").on("shown.bs.modal", function() {
     $("#message").focus();
