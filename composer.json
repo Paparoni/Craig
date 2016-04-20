@@ -1,5 +1,20 @@
 {
-    "require": {
-        "AntwaunTuneJr/craig": "1.0.*"
+    "name": "AntwaunTuneJr/craig",
+    "type": "AI",
+    "description": "Artificial Intelligence Robot",
+    "keywords": ["ai","robot"],
+    "homepage": "https://github.com/AntwaunTuneJr/Craig",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Antwaun Tune Jr",
+            "email": "antwauntune@bloob.ga",
+            "homepage": "http://bloob.ga",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "Monolog": ""
+        }
     }
-}
