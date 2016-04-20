@@ -1,0 +1,17 @@
+{
+  "name": "craig",
+  "version": "0.1",
+  "release": "beta",
+  "description": "A fast, free and fun HTML5 Game Framework for Desktop and Mobile web browsers.",
+  "author": "Antwaun Tune Jr. <antwauntune@bloob.ga> (http://www.bloob.ga)",
+  "logo": "",
+  "homepage": "http://bloob.ga",
+  "bugs": "https://github.com/BloobINC/Craig/issues",
+  "license": "MIT",
+  "licenseUrl": "http://www.opensource.org/licenses/mit-license.php",
+  "main": "./Craig.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BloobINC/Craig.git"
+  }
+}
