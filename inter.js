@@ -38,7 +38,10 @@ var talkToBot = function(message) {
 }
 $(document).ready(function() {
     var $dialogue = $("#outputCS");
-    $("#chatModal").modal();
+   $("#ttc").click(function(){
+       $("#chatModal").modal();
+    })
+    
     $("#userInput").keypress(function(event) {
         if (event.which == 13) {
             event.preventDefault();
@@ -47,3 +50,4 @@ $(document).ready(function() {
         }
     });
 })
+	
