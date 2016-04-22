@@ -3,7 +3,9 @@ function e_filter(text) {
     ':-)' : '1f60a.png',
     ':)'  : '1f60a.png',
     ':D'  : '1f604.png',
-    ':('  : '1f61f.png'
+    ':('  : '1f61f.png',
+    ":P"  : '1f61d.png',
+    ';P'  : '1f61c.png'
   }, url = "https://assets-cdn.github.com/images/icons/emoji/unicode/", patterns = [],
      metachars = /[[\]{}()*+?.\\|^$\-,&#\s]/g;
 
