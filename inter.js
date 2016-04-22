@@ -20,10 +20,10 @@ var talkToBot = function(message) {
 
 
         var reply = Craig.reply("local-user", message);
-        $('#outputCS').append('<b><font color=\'blue\'>You:</b></font>' + message + '<br/>');
+        $('#outputCS').append('<b><font color=\'blue\'>You:</b></font>' + e_filter(message) + '<br/>');
         toastr.info("Craig is typing...")
         var write_rep = function() {
-            $('#outputCS').append('<b><font color=\'green\'>Craig:</b></font>' + reply + '<br/>');
+            $('#outputCS').append('<b><font color=\'green\'>Craig:</b></font>' + e_filter(reply) + '<br/>');
             clearTimeout(wrote_rep);
         }
         var wrote_rep = setTimeout(function() {
