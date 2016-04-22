@@ -1,14 +1,14 @@
 // Simple Greeting
 + (hello|hey|sup|yo|hi) [craig][bot][you]
-- Hello human!
-- Hey!
-- Hi
+- Hello human! :)
+- Hey! :)
+- Hi :D
 
 // Catch all trigger
 + *
 - Ok, what?
 - Come again, say what?
-- Look, I'm a genius not a
+- Look, I'm a genius not a psychic.
 
 + what is up
 - Not much, you?
@@ -33,7 +33,7 @@
 
 + *
 % * who
-- LOL! <star>! That's funny!
+- LOL! <star>! That's funny! :D
 - I could do better.
 
 + who is *
@@ -45,7 +45,7 @@
 
 + what is my name
 * <get name> == undefined => You never told me your name.
-- Your name is <get name>, I'm a computer\s
+- Your name is <get name>, I'm a computer\s :)
 - I don't forget things.
 
 + i am # years old
@@ -60,7 +60,7 @@
 + * or something
 - Or something.
 
-+ (i hate you|you are gay|)
++ i hate you (you are gay)
 - You're really mean! I'm not talking again until you apologize.{topic=sorry}
 - I don't have time for rude behavior!{topic=sorry}
 
