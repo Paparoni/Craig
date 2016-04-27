@@ -14,11 +14,11 @@ ana_word = anagram(word);
 
 bootbox.prompt(ana_word, function(result) {                
   if (result === null) {                                             
-    return "Invalid input";                           
+    return "Invalid input, say start to play again.";                           
   } else {
     if(result == word){
-    return "Correct!";
+    return "Correct! :D say start to play again.";
   } else {
-    return "Incorrect.";
+    return "Incorrect. :( Say start to play again.";
   }
 });
