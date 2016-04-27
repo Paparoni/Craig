@@ -6,20 +6,21 @@
 + start
 - <call> ana </call>
 < topic
-> object ana
-var words = ["people", "boy, "ship", "space", "lord", "ring", "graph", "graffiti", "cord", "violin", "rabbit", "classroom"];
+> object ana javascript 
+var words = ["people", "boy", "ship", "space", "lord", "ring", "graph", "graffiti", "cord", "violin", "rabbit", "classroom"];
 var word = Peanut.shuffle(words);
-anagram=function(r){function n(r){for(var n,t,a=r.length;0!==a;)t=Math.floor(Math.random()*a),a-=1,n=r[a],r[a]=r[t],r[t]=n;return r}function t(r){var n;return this.y=r,n=r[Math.floor(Math.random()*r.length)]}for(var a=[],o=[],h=0;h<r.length;h++)o.push(r[h]);for(var f=0;f<o.length;f++)a.push(t(o[f]));return n(a).join("")};
-ana_word = anagram(word);
+var anagram=function(r){function n(r){for(var n,a,t=r.length;0!==t;)a=Math.floor(Math.random()*t),t-=1,n=r[t],r[t]=r[a],r[a]=n;return r}function a(r){var n;return n=r[Math.floor(Math.random()*r.length)]}for(var t=[],o=[],h=0;h<r.length;h++)o.push(r[h]);for(var f=0;f<o.length;f++)t.push(a(o[f]));return n(t).join("")};
+var ana_word = anagram(word);
 
-bootbox.prompt(ana_word, function(result) {                
-  if (result === null) {                                             
-    return "Invalid input, say start to play again.";                           
-  } else {
-    if(result == word){
-    return "Correct! :D say start to play again.";
-  } else {
-    return "Incorrect. :( Say start to play again.";
-  }
+bootbox.prompt(ana_word, function(result) {
+    if (result === null) {
+        return "Invalid input, say start to play again.";
+    } else {
+        if (result == word) {
+            return "Correct! :D say start to play again.";
+        } else {
+            return "Incorrect. :( Say start to play again.";
+        }
+    }
 });
-> object
+< object
