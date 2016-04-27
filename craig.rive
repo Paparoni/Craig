@@ -31,6 +31,9 @@
 % who is there
 - <star> who?
 
++ [play] anagram
+- {topic=anagram} Now playing anagram! Say start to start.
+
 + *
 % * who
 - LOL! <star>! That's funny! :D
