@@ -10,7 +10,11 @@ var talkToBot = function(message) {
         "craig.file/craig.rive",
         "craig.file/games.rive",
         "craig.file/brain.rive",
-        "craig.file/extra.rive"
+        "craig.file/extra.rive",
+        "craig.file/def.rive",
+        "craig.file/general.rive",
+        "craig.file/extra2.rive"
+        
     ], loading_done, loading_error);
 
 
