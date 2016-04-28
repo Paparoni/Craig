@@ -8,7 +8,8 @@ var talkToBot = function(message) {
     Craig.loadFile([
         "craig.file/begin.rive",
         "craig.file/craig.rive",
-        "craig.file/games.rive"
+        "craig.file/games.rive",
+        "craig.file/brain.rive"
     ], loading_done, loading_error);
 
 
