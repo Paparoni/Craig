@@ -14,7 +14,10 @@ var talkToBot = function(message) {
         "craig.file/def.rive",
         "craig.file/general.rive",
         "craig.file/extra2.rive",
-        "craig.file/jokes.rive"
+        "craig.file/jokes.rive",
+        "craig.file/learn.rive".
+        "craig.file/mp0.rive",
+        "craig.file/about.rive"
         
     ], loading_done, loading_error);
 
