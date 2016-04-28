@@ -6,9 +6,9 @@ $("#chatModal").on("shown.bs.modal", function() {
 
 var talkToBot = function(message) {
     Craig.loadFile([
-        "begin.rive",
-        "craig.rive",
-        "games.rive"
+        "craig.file/begin.rive",
+        "craig.file/craig.rive",
+        "craig.file/games.rive"
     ], loading_done, loading_error);
 
 
