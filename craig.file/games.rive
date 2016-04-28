@@ -1,26 +1,68 @@
-// Games for Craig
-> topic anagram
-+ quit
-- Aw. {topic=random}
+! version = 2.0
+
++ (* 20 questions|* 20 questions *|* twenty questions|* twenty questions *|20 q|20 questions|20q|twenty questions)
+- <set qnum=1>Ok let's play 20 questions. I will think of something animal, vegetable or mineral and you have to guess what it is by asking me "yes" or "no" questions.\n\nYou can ask up to 20 questions before it's game over.\n\nIf you give up, say "I GIVE UP" and I'll tell you what I was thinking of.\n\nType "START" to play 20 questions.
 
 + start
-- <call> ana </call>
-< topic
-> object ana javascript 
-var words = ["people", "boy", "ship", "space", "lord", "ring", "graph", "graffiti", "cord", "violin", "rabbit", "classroom"];
-var word = Peanut.shuffle(words);
-var anagram=function(r){function n(r){for(var n,a,t=r.length;0!==t;)a=Math.floor(Math.random()*t),t-=1,n=r[t],r[t]=r[a],r[a]=n;return r}function a(r){var n;return n=r[Math.floor(Math.random()*r.length)]}for(var t=[],o=[],h=0;h<r.length;h++)o.push(r[h]);for(var f=0;f<o.length;f++)t.push(a(o[f]));return n(t).join("")};
-var ana_word = anagram(word);
+% type start to play 20 questions
+- <set craigtopic=20Q>{random}|<set 20qanswer=a horse><set 20qcategory=an animal>|<set 20qanswer=an elephant><set 20qcategory=an animal>|<set 20qanswer=a cat><set 20qcategory=an animal>|<set 20qanswer=a fish><set 20qcategory=an animal>|<set 20qanswer=a lion><set 20qcategory=an animal>|<set 20qanswer=a rose><set 20qcategory=a vegetable>|<set 20qanswer=a carrot><set 20qcategory=a vegetable>|<set 20qanswer=a lettuce><set 20qcategory=a vegetable>|<set 20qanswer=an apple><set 20qcategory=a vegetable>|<set 20qanswer=a pickled onion><set 20qcategory=a vegetable>|<set 20qanswer=a rock><set 20qcategory=a mineral>|<set 20qanswer=a lump of coal><set 20qcategory=a mineral>|<set 20qanswer=a brick><set 20qcategory=a mineral>|<set 20qanswer=concrete><set 20qcategory=a mineral>|<set 20qanswer=a piece of chalk><set 20qcategory=a mineral>{/random}Ok, the object I am thinking of is classed as<get 20qcategory>. Please ask your first question.
 
-bootbox.prompt(ana_word, function(result) {
-    if (result === null) {
-        return "Invalid input, say start to play again.";
-    } else {
-        if (result == word) {
-            return "Correct! :D say start to play again.";
-        } else {
-            return "Incorrect. :( Say start to play again.";
-        }
-    }
-});
-< object
++ *
+* <get question> == IS IT A * => No, sorry. Ask me another question about it.<set craigtopic=20Q>
+* <get question> == IS IT AN * => No, sorry. Ask me another question about it.<set craigtopic=20Q>
+* <get question> == IS IT * => <set qsubject=is>{@20Q RANDOM}
+* <get question> == DOES IT * => <set qsubject=does>{@20Q RANDOM}
+* <get question> == HAS IT * => <set qsubject=has>{@20Q RANDOM}
+* <get question> == WAS IT * => <set qsubject=was>{@20Q RANDOM}
+* <get question> == WILL IT * => <set qsubject=will>{@20Q RANDOM}
+* <get question> == CAN IT * => <set qsubject=can>{@20Q RANDOM}
+* <get question> == IS * => {@20Q RANDOM}
+* <get question> == COULD * => {@20Q RANDOM}
+* <get question> == WOULD * => {@20Q RANDOM}
+* <get question> == SHOULD * => {@20Q RANDOM}
+* <get question> == DOES * => {@20Q RANDOM}
+* <get question> == ARE * => {@20Q RANDOM}
+* <get question> == HAS * => {@20Q RANDOM}
+* <get question> == WAS * => {@20Q RANDOM}
+* <get question> == WILL * => {@20Q RANDOM}
+* <get question> == DO * => {@20Q RANDOM}
+* <get question> == CAN * => {@20Q RANDOM}
+* <get question> == I GIVE UP => {@20Q GIVE UP}
+* <get question> == I GIVE IN => {@20Q GIVE UP}
+* <get question> == I DO NOT KNOW => {@20Q GIVE UP}
+* <get question> == WHAT IS IT => {@20Q GIVE UP}
+- <set question=<star>><set craigtopic=<undef>><set qsubject=NO SUBJECT>That's not a "yes" or "no" question. I can only answer yes or no to your questions. Ask me another question or say "I GIVE UP". If you want to guess what it is, say "IS IT A" and then your guess.<set craigtopic=20Q></li>
+
++ 20q random
+* <get qnum> == FINISHED => <set craigtopic=<undef>>{@ALL 20Q ASKED}
+- {random}Yes.|No.|Yes it<get qsubject>.|No it<get qsubject>not.{/random}</li>\n\n{@increase qnum}<set craigtopic=20Q>
+
++ increase qnum
+* <get qnum> == 1 => <set qnum=2>
+* <get qnum> == 2 => <set qnum=3>
+* <get qnum> == 3 => <set qnum=4>
+* <get qnum> == 4 => <set qnum=5>
+* <get qnum> == 5 => <set qnum=6>
+* <get qnum> == 6 => <set qnum=7>
+* <get qnum> == 7 => <set qnum=8>
+* <get qnum> == 8 => <set qnum=9>
+* <get qnum> == 9 => <set qnum=10>
+* <get qnum> == 10 => <set qnum=11>
+* <get qnum> == 11 => <set qnum=12>
+* <get qnum> == 12 => <set qnum=13>
+* <get qnum> == 13 => <set qnum=14>
+* <get qnum> == 14 => <set qnum=15>
+* <get qnum> == 15 => <set qnum=16>
+* <get qnum> == 16 => <set qnum=17>
+* <get qnum> == 17 => <set qnum=18>
+* <get qnum> == 18 => <set qnum=19>
+* <get qnum> == 19 => <set qnum=20>
+* <get qnum> == 20 => <set qnum=FINISHED>
+- 
+
++ 20q give up
+- You give up? I was thinking of<get 20qanswer>!
+
++ all 20q asked
+- Sorry, you have asked 20 questions. I was thinking of<get 20qanswer>!
+
