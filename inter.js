@@ -1,5 +1,5 @@
 var Craig = new RiveScript();
-
+Craig.unicodePunctuation = new RegExp(/[.,!?;:]/g);
 $("#chatModal").on("shown.bs.modal", function() {
     $("#message").focus();
 });
