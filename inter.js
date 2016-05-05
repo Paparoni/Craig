@@ -36,6 +36,7 @@ function loading_error(batch_num, error) {
 
 function sendToBot(message) {
     var reply = Craig.reply("local-user", message);
+    addTolog(message, reply);
     if (fr_translate == true) {
         $('#outputCS').append('<b><font color=\'blue\'>You:</b></font>' + e_filter(message) + '<br/>');
         var write_rep = function() {
@@ -45,6 +46,7 @@ function sendToBot(message) {
         var wrote_rep = setTimeout(function() {
             write_rep();
         }, 3500);
+       
     } else if (es_translate == true) {
         $('#outputCS').append('<b><font color=\'blue\'>You:</b></font>' + e_filter(message) + '<br/>');
         var write_rep = function() {
@@ -77,7 +79,7 @@ $(document).ready(function() {
         $("#chatModal").modal();
     })
     $("#savelog").click(function(){
-        
+        saveLog();
     })
     $("#userInput").keypress(function(event) {
         if (event.which == 13) {
