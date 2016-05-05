@@ -1,3 +1,18 @@
+> object french javascript
+es_translate = false
+fr_translate = true
+< object
+
+> object english javascript
+fr_translate = false
+es_translate = false
+< object
+
+> object spanish javascript
+fr_translate = false
+es_translate = true
+< object
+
 // Simple Greeting
 + (hello|hey|sup|yo|hi) [craig][bot][you]
 - Hello human! :)
@@ -58,6 +73,15 @@
 + i hate you (you are gay)
 - You're really mean! I'm not talking again until you apologize.{topic=sorry}
 - I don't have time for rude behavior!{topic=sorry}
+
++ french
+- I can speak french <call>french</call>
+
++ spanish
+- I can speak spanish <call>spanish</call>
+
++ english
+- Okay back to english <call>english</call>
 
 > topic sorry
 
