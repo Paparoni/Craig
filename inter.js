@@ -36,7 +36,7 @@ function loading_error(batch_num, error) {
 
 function sendToBot(message) {
     var reply = Craig.reply("local-user", message);
-    addTolog(message, reply);
+    addTolog(reply, message);
     if (fr_translate == true) {
         $('#outputCS').append('<b><font color=\'blue\'>('+Peanut.time()+') You:</b></font>' + e_filter(message) + '<br/>');
         var write_rep = function() {
