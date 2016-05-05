@@ -4,11 +4,6 @@
 - Hey! :)
 - Hi :D
 
-// Catch all trigger
-+ *
-- Ok, what?
-- Come again, say what?
-- Look, I'm a genius not a psychic.
 
 + what is up
 - Not much, you?
@@ -30,9 +25,6 @@
 + *
 % who is there
 - <star> who?
-
-+ [play] anagram
-- {topic=anagram} Now playing anagram! Say start to start.
 
 + *
 % * who
@@ -94,18 +86,3 @@
 + what is my ip
 - Your IP address is: <env REMOTE_ADDR>
  
-+ [play] (20 questions|twenty questions)
-- {topic=tq}Now playing twenty questions. Type "quit" to quit.
-
-> topic tq
-
-  + quit
-  - Quitting the game.{topic=random}
-
-  + *
-  - <calltw <star></call>
-
-< topic
-> object tw
-var word = Peanut.shuffle(words);
-
