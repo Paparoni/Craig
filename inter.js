@@ -7,7 +7,6 @@ $("#chatModal").on("shown.bs.modal", function() {
 Craig.loadFile([
     "craig.file/begin.rive",
     "craig.file/craig.rive",
-    "craig.file/games.rive",
     "craig.file/brain.rive",
     "craig.file/extra.rive",
     "craig.file/def.rive",
