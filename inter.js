@@ -25,7 +25,7 @@ Craig.loadFile([
 
 function loading_done(batch_num) {
     console.log("Batch #" + batch_num + " has finished loading!");
-
+    $("#loading").hide();
 
     Craig.sortReplies();
 }
@@ -36,26 +36,36 @@ function loading_error(batch_num, error) {
 
 function sendToBot(message) {
     var reply = Craig.reply("local-user", message);
-    if(fr_translate == true){
+    if (fr_translate == true) {
         $('#outputCS').append('<b><font color=\'blue\'>You:</b></font>' + e_filter(message) + '<br/>');
-            var write_rep = function() {
-        $('#outputCS').append('<b><font color=\'green\'>Craig:</b></font>' + e_filter(translate("french", reply)) + '<br/>');
-        clearTimeout(wrote_rep);
-    }
-    var wrote_rep = setTimeout(function() {
-        write_rep();
-    }, 3500);
+        var write_rep = function() {
+            translate_fr(reply);
+            clearTimeout(wrote_rep);
+        }
+        var wrote_rep = setTimeout(function() {
+            write_rep();
+        }, 3500);
+    } else if (es_translate == true) {
+        $('#outputCS').append('<b><font color=\'blue\'>You:</b></font>' + e_filter(message) + '<br/>');
+        var write_rep = function() {
+            translate_es(reply);
+            clearTimeout(wrote_rep);
+        }
+        var wrote_rep = setTimeout(function() {
+            write_rep();
+        }, 3500);
+
     } else {
-    $('#outputCS').append('<b><font color=\'blue\'>You:</b></font>' + e_filter(message) + '<br/>');
-    toastr.info("Craig is typing...")
-    var write_rep = function() {
-        $('#outputCS').append('<b><font color=\'green\'>Craig:</b></font>' + e_filter(reply) + '<br/>');
-        clearTimeout(wrote_rep);
+        $('#outputCS').append('<b><font color=\'blue\'>You:</b></font>' + e_filter(message) + '<br/>');
+        toastr.info("Craig is typing...")
+        var write_rep = function() {
+            $('#outputCS').append('<b><font color=\'green\'>Craig:</b></font>' + e_filter(reply) + '<br/>');
+            clearTimeout(wrote_rep);
+        }
+        var wrote_rep = setTimeout(function() {
+            write_rep();
+        }, 3500);
     }
-    var wrote_rep = setTimeout(function() {
-        write_rep();
-    }, 3500);
-}
 }
 
 
