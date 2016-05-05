@@ -1,4 +1,6 @@
 var Craig = new RiveScript();
+var es_translate = false;
+var fr_translate = false;
 Craig.unicodePunctuation = new RegExp(/[.,!?;:]/g);
 $("#chatModal").on("shown.bs.modal", function() {
     $("#message").focus();
@@ -34,6 +36,16 @@ function loading_error(batch_num, error) {
 
 function sendToBot(message) {
     var reply = Craig.reply("local-user", message);
+    if(fr_translate == true){
+        $('#outputCS').append('<b><font color=\'blue\'>You:</b></font>' + e_filter(message) + '<br/>');
+            var write_rep = function() {
+        $('#outputCS').append('<b><font color=\'green\'>Craig:</b></font>' + e_filter(translate("french", reply)) + '<br/>');
+        clearTimeout(wrote_rep);
+    }
+    var wrote_rep = setTimeout(function() {
+        write_rep();
+    }, 3500);
+    } else {
     $('#outputCS').append('<b><font color=\'blue\'>You:</b></font>' + e_filter(message) + '<br/>');
     toastr.info("Craig is typing...")
     var write_rep = function() {
@@ -43,6 +55,7 @@ function sendToBot(message) {
     var wrote_rep = setTimeout(function() {
         write_rep();
     }, 3500);
+}
 }
 
 
