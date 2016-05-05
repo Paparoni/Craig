@@ -13,7 +13,6 @@ month[8] = "September";
 month[9] = "October";
 month[10] = "November";
 month[11] = "December";
-var m = 
 var day = d.getDay();
 var year = d.getYear();
 /*/ End of system variables /*/
