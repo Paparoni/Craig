@@ -76,7 +76,9 @@ $(document).ready(function() {
     $("#ttc").click(function() {
         $("#chatModal").modal();
     })
-
+    $("#savelog").click(function(){
+        
+    })
     $("#userInput").keypress(function(event) {
         if (event.which == 13) {
             event.preventDefault();
