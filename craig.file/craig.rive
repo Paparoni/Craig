@@ -74,13 +74,13 @@ es_translate = true
 - You're really mean! I'm not talking again until you apologize.{topic=sorry}
 - I don't have time for rude behavior!{topic=sorry}
 
-+ french
++ [*] french [*]
 - I can speak french <call>french</call>
 
-+ spanish
++ [*] spanish [*]
 - I can speak spanish <call>spanish</call>
 
-+ english
++ [*] english [*]
 - Okay back to english <call>english</call>
 
 > topic sorry
