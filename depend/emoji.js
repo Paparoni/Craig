@@ -6,7 +6,7 @@ function e_filter(text) {
     ':('  : '1f61f.png',
     ":P"  : '1f61d.png',
     ';P'  : '1f61c.png'
-  }, url = "https://assets-cdn.github.com/images/icons/emoji/unicode/", patterns = [],
+  }, url = "emojis/", patterns = [],
      metachars = /[[\]{}()*+?.\\|^$\-,&#\s]/g;
 
   for (var i in emoticons) {
