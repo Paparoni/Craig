@@ -16,7 +16,8 @@ Craig.loadFile([
     "craig.file/jokes.rive",
     "craig.file/learn.rive",
     "craig.file/mp0.rive",
-    "craig.file/about.rive"
+    "craig.file/about.rive",
+    "craig.file/inquiry.rive"
 
 ], loading_done, loading_error);
 
