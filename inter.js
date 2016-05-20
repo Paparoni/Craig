@@ -38,7 +38,7 @@ function sendToBot(message) {
     var reply = Craig.reply("local-user", message);
     addTolog(reply, message);
     if (fr_translate == true) {
-        $('#outputCS').append('<b><font color=\'blue\'>('+Peanut.time()+') You:</b></font>' + e_filter(message) + '<br/>');
+        $('#outputCS').append('<b><font color=\'blue\'>('+Peanut.time()+') You:</b></font>' + message + '<br/>');
         var write_rep = function() {
             translate_fr(reply);
             clearTimeout(wrote_rep);
@@ -48,7 +48,7 @@ function sendToBot(message) {
         }, 3500);
        
     } else if (es_translate == true) {
-        $('#outputCS').append('<b><font color=\'blue\'>('+Peanut.time()+') You:</b></font>' + e_filter(message) + '<br/>');
+        $('#outputCS').append('<b><font color=\'blue\'>('+Peanut.time()+') You:</b></font>' + message + '<br/>');
         var write_rep = function() {
             translate_es(reply);
             clearTimeout(wrote_rep);
@@ -58,10 +58,10 @@ function sendToBot(message) {
         }, 3500);
 
     } else {
-        $('#outputCS').append('<b><font color=\'blue\'>('+Peanut.time()+') You:</b></font>' + e_filter(message) + '<br/>');
+        $('#outputCS').append('<b><font color=\'blue\'>('+Peanut.time()+') You:</b></font>' + message + '<br/>');
         toastr.info("Craig is typing...")
         var write_rep = function() {
-            $('#outputCS').append('<b><font color=\'green\'>('+Peanut.time()+') Craig:</b></font>' + e_filter(reply) + '<br/>');
+            $('#outputCS').append('<b><font color=\'green\'>('+Peanut.time()+') Craig:</b></font>' + reply + '<br/>');
             clearTimeout(wrote_rep);
         }
         var wrote_rep = setTimeout(function() {
