@@ -7,18 +7,7 @@ $("#chatModal").on("shown.bs.modal", function() {
 });
 
 Craig.loadFile([
-    "craig.file/begin.rive",
-    "craig.file/craig.rive",
-    "craig.file/brain.rive",
-    "craig.file/extra.rive",
-    "craig.file/def.rive",
-    "craig.file/general.rive",
-    "craig.file/extra2.rive",
-    "craig.file/jokes.rive",
-    "craig.file/learn.rive",
-    "craig.file/mp0.rive",
-    "craig.file/about.rive",
-    "craig.file/inquiry.rive"
+    "craig.file/craig.rive"
 
 ], loading_done, loading_error);
 
