@@ -7,7 +7,9 @@ $("#chatModal").on("shown.bs.modal", function() {
 });
 
 Craig.loadFile([
-    "craig.file/craig.rive"
+    "craig.file/begin.rive",
+    "craig.file/craig.rive",
+    "craig.file/general.rie"
 
 ], loading_done, loading_error);
 
