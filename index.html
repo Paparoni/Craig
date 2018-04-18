@@ -1,110 +1,154 @@
 <!DOCTYPE html>
-<html lang="en"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Craig</title>
     <script src="libs/filesaver.js"></script>
- <script src="libs/peanut.js"></script>
-<script src="libs/jquery.js"></script>
-<link rel="stylesheet" type="text/css" href="libs/bootstrap.css">
-<script src="libs/bootstrap.js"></script>
-<script src="libs/bootbox.js"></script>
-<script src="libs/rivescript.js"></script>
-<link rel="stylesheet" type="text/css" href="craig.css">
-<link rel="stylesheet" type="text/css" href="libs/monokai.css">
-<link rel="stylesheet" type="text/css" href="libs/ui.css">
-<link rel="stylesheet" href="libs/toastr.css" type="text/css" />
-<script type="text/javascript" src="libs/toastr.js"></script>
-<script src="libs/oboe.js"></script>
-<script src="depend/settings.js"></script>
-<script src="depend/emoji.js"></script>
-<script src="depend/translate.js"></script>
-<script src="depend/log.js"></script>
-<script src="inter.js"></script>
+    <script src="libs/peanut.js"></script>
+    <script src="libs/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="libs/bootstrap.css">
+    <script src="libs/bootstrap.js"></script>
+    <script src="libs/bootbox.js"></script>
+    <script src="libs/rivescript.js"></script>
+    <link rel="stylesheet" type="text/css" href="craig.css">
+    <link rel="stylesheet" type="text/css" href="libs/monokai.css">
+    <link rel="stylesheet" type="text/css" href="libs/ui.css">
+    <link rel="stylesheet" href="libs/toastr.css" type="text/css" />
+    <script type="text/javascript" src="libs/toastr.js"></script>
+    <script src="libs/oboe.js"></script>
+    <script src="depend/settings.js"></script>
+    <script src="depend/emoji.js"></script>
+    <script src="depend/translate.js"></script>
+    <script src="depend/log.js"></script>
+    <script src="inter.js"></script>
 
     <link rel="stylesheet" href="./Alphabet_files/style.css">
 
-  </head>
-  <body>
+</head>
+
+<body>
 
     <main class="outer-container">
 
-      <div class="bg-image">
-        <img class="desktop" title="" alt="" src="http://cliparts.co/cliparts/8iz/Knk/8izKnk6zT.png" align="right">
-      </div>
-
-      <div id="logo">Craig</div>
-
-      <nav id="menu">
-        <ul>
-          <li><a href="https://bloob.ga/" target="_blank">Bloob Site</a></li>
-        </ul>
-      </nav>
-
-      <div class="wrapper">
-
-        <div class="text-container">
-<font style="Comic Sans">
-          <h1> Craig </h1>
-          <h2> Computer Response Artificial Inteliigence Genie</h2>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<div class="modal fade" id="chatModal" tabindex="-1" role="outputCS" aria-labelledby="chatModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-				<h4 class="modal-title" id="chatModalLabel">Dialogue</h4>
-			</div>
-			<div class="modal-body">
-				<div class="try-dialogue" id="outputCS"></div>
-
-				<fieldset>
-					<legend>Send a Message</legend>
-					<input type="text" class="form-control" id="userInput" placeholder="Press Enter to send">
-				</fieldset>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-success" id="savelog">Save log</button>
-			</div>
-		</div>
-	</div>
-</div>
-
-          <div class="copy">
-
-            <p>Features:</p>
-            <ul>
-              <li>Extremely intelligent (not at the moment)</li>
-              <li>Games.</li>
-              <li>Young minded.</li>
-              <li>He feels human, it feels like you're talking to a human</li>
-              <li>And much, much more.</li>
-            </ul>
-
-          </div>
-
-          <br>
-          <a href="#" id="ttc" class="btn btn-lg btn-info"><span class="glyphicon glyphicon-comment"></span> Talk to Craig</a>
-
+        <div class="bg-image">
+            <img class="desktop" title="" alt="" src="http://cliparts.co/cliparts/8iz/Knk/8izKnk6zT.png" align="right">
         </div>
 
-      </div>
+        <div id="logo">Craig</div>
+
+        <nav id="menu">
+            <ul>
+                <li><a href="https://bloob.ga/" target="_blank">Bloob Site</a></li>
+            </ul>
+        </nav>
+
+        <div class="wrapper">
+
+            <div class="text-container">
+                <font style="Comic Sans">
+                    <h1> Craig </h1>
+                    <h2> Computer Response Artificial Inteliigence Genie</h2>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <div class="modal fade" id="chatModal" tabindex="-1" role="outputCS" aria-labelledby="chatModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+                                    <h4 class="modal-title" id="chatModalLabel">Dialogue</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="try-dialogue" id="outputCS"></div>
+
+                                    <fieldset>
+                                        <legend>Send a Message</legend>
+                                        <input type="text" class="form-control" id="userInput" placeholder="Press Enter to send">
+                                    </fieldset>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-success" id="savelog">Save log</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="copy">
+
+                        <p>Features:</p>
+                        <ul>
+                            <li>Extremely intelligent (not at the moment)</li>
+                            <li>Games.</li>
+                            <li>Young minded.</li>
+                            <li>He feels human, it feels like you're talking to a human</li>
+                            <li>And much, much more.</li>
+                        </ul>
+
+                    </div>
+
+                    <br>
+                    <a href="#" id="ttc" class="btn btn-lg btn-info"><span class="glyphicon glyphicon-comment"></span> Talk to Craig</a>
+
+            </div>
+
+        </div>
 
     </main>
 
     <footer class="site-footer">Craig, Created and maintained by: Cleomedes</footer>
-</font>
+    </font>
     <script>
-      function getHeight(el){var el_style=window.getComputedStyle(el),el_display=el_style.display,el_max_height=el_style.maxHeight.replace("px","").replace("%",""),wanted_height=0;if(el_display!=="none"&&el_max_height!=="0")return el.offsetHeight;el.style.display="block";wanted_height=el.offsetHeight;el.style.display=el_display;return wanted_height}
-function toggleSlide(el){var el_max_height=0;if(el.getAttribute("data-max-height"))if(el.style.maxHeight.replace("px","").replace("%","")==="0")el.style.maxHeight=el.getAttribute("data-max-height");else el.style.maxHeight="0";else{el_max_height=getHeight(el)+"px";el.style["transition"]="max-height 0.5s ease-in-out";el.style.overflowY="hidden";el.style.maxHeight="0";el.setAttribute("data-max-height",el_max_height);el.style.display="block";setTimeout(function(){el.style.maxHeight=el_max_height},10);
-setTimeout(function(){document.querySelector(".hide").style["transition"]="all 0s 0s ease";document.querySelector(".hide").style["max-height"]="none"},700)}}if(window.addEventListener)document.querySelector(".read-more").addEventListener("click",function(e){this.style.display="none";document.querySelector(".hide-inline").style.display="inline";toggleSlide(document.querySelector(".hide"));e.preventDefault();return false},false);
+        function getHeight(el) {
+            var el_style = window.getComputedStyle(el),
+                el_display = el_style.display,
+                el_max_height = el_style.maxHeight.replace("px", "").replace("%", ""),
+                wanted_height = 0;
+            if (el_display !== "none" && el_max_height !== "0") return el.offsetHeight;
+            el.style.display = "block";
+            wanted_height = el.offsetHeight;
+            el.style.display = el_display;
+            return wanted_height
+        }
+
+        function toggleSlide(el) {
+            var el_max_height = 0;
+            if (el.getAttribute("data-max-height"))
+                if (el.style.maxHeight.replace("px", "").replace("%", "") === "0") el.style.maxHeight = el.getAttribute("data-max-height");
+                else el.style.maxHeight = "0";
+            else {
+                el_max_height = getHeight(el) + "px";
+                el.style["transition"] = "max-height 0.5s ease-in-out";
+                el.style.overflowY = "hidden";
+                el.style.maxHeight = "0";
+                el.setAttribute("data-max-height", el_max_height);
+                el.style.display = "block";
+                setTimeout(function() {
+                    el.style.maxHeight = el_max_height
+                }, 10);
+                setTimeout(function() {
+                    document.querySelector(".hide").style["transition"] = "all 0s 0s ease";
+                    document.querySelector(".hide").style["max-height"] = "none"
+                }, 700)
+            }
+        }
+        if (window.addEventListener) document.querySelector(".read-more").addEventListener("click", function(e) {
+            this.style.display = "none";
+            document.querySelector(".hide-inline").style.display = "inline";
+            toggleSlide(document.querySelector(".hide"));
+            e.preventDefault();
+            return false
+        }, false);
     </script>
 
-  
 
-</body></html>
+
+</body>
+
+</html>
